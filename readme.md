@@ -1,8 +1,11 @@
 Evento DOMContentLoaded:
 
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchUsers();
 });
+
+
 Este trecho de código adiciona um ouvinte de evento que espera até que o conteúdo do DOM (Document Object Model) seja completamente carregado. Quando isso acontece, a função fetchUsers é chamada.
 Função fetchUsers:
 
@@ -18,6 +21,8 @@ async function fetchUsers() {
         console.error('Erro ao buscar usuários:', error);
     }
 }
+
+
 Esta é uma função assíncrona que busca dados de usuários de uma API.
 fetch é usado para fazer uma solicitação HTTP para a URL fornecida.
 await é usado para esperar a resposta da solicitação.
@@ -38,6 +43,8 @@ function displayUsers(users) {
         userList.appendChild(listItem);
     });
 }
+
+
 Esta função recebe um array de usuários e exibe seus nomes em uma lista.
 userList é o elemento HTML com o ID user-list.
 userList.innerHTML = ''; limpa qualquer conteúdo existente na lista.
@@ -56,6 +63,8 @@ function showUserDetails(user) {
         <p>Address: ${user.address.street}, ${user.address.city}</p>
     `;
 }
+
+
 Esta função recebe um objeto user e exibe seus detalhes.
 userDetails é o elemento HTML com o ID user-details.
 O conteúdo HTML do userDetails é definido para exibir o nome, email, telefone, website e endereço do usuário.
